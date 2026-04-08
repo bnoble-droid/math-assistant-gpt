@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Assistant GPT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f9fc;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: #1f3c88;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+    nav {
+      background: #163172;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    h2 {
+      color: #1f3c88;
+    }
+    code, pre {
+      background: #f4f4f4;
+      padding: 6px 8px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .chat-box {
+      background: #eef4ff;
+      border-left: 5px solid #1f3c88;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #1f3c88;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #eaf0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Math Assistant GPT</h1>
+    <p>A custom AI assistant for solving quadratic equations using TinyLlama, Docker, LM Studio, and AnythingLLM.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#domain">Domain</a>
+    <a href="#how">How to Use</a>
+    <a href="#development">Development</a>
+    <a href="#testing">Testing</a>
+  </nav>
+
+  <section id="about">
+    <h2>About the Project</h2>
+    <p>
+      This project presents a custom GPT-style math assistant built for quadratic equation solving.
+      The assistant was created from a fine-tuned TinyLlama model trained on math examples and deployed locally using LM Studio and AnythingLLM.
+    </p>
+    <p>
+      The purpose of the system is to provide an interactive AI-based math support tool that can answer basic math questions and attempt step-by-step solutions for quadratic equations.
+    </p>
+  </section>
+
+  <section id="domain">
+    <h2>Chosen Domain</h2>
+    <p>
+      The chosen domain is <strong>Mathematics Education</strong>, with a focus on quadratic equations.
+      This domain was selected because students often need guided support when solving algebraic expressions and equations.
+    </p>
+    <ul>
+      <li>Basic arithmetic support</li>
+      <li>Quadratic equation solving</li>
+      <li>Structured prompting using symbolic input</li>
+      <li>Interactive question-answer interface</li>
+    </ul>
+  </section>
+
+  <section id="how">
+    <h2>How to Use the System</h2>
+    <p>To use the math assistant effectively:</p>
+    <ol>
+      <li>Open the chat interface in AnythingLLM.</li>
+      <li>Enter your question or equation.</li>
+      <li>For best results, use quadratic equations in this format:</li>
+    </ol>
+    <p><code>Eq(x**2 - 5*x + 6, 0)</code></p>
+
+    <div class="chat-box">
+      <strong>Example Prompt:</strong><br />
+      Solve step by step quadratic equation: Eq(x**2 - 5*x + 6, 0)
+    </div>
+
+    <p>
+      The assistant will then attempt to provide a structured response. For basic arithmetic, simple direct questions such as
+      <code>5 + 5</code> can also be used.
+    </p>
+  </section>
+
+  <section id="development">
+    <h2>Development Process</h2>
+    <p>The project development process included:</p>
+    <ul>
+      <li>Fine-tuning a TinyLlama model using QLoRA on mathematical examples</li>
+      <li>Saving training output into adapter and merged folders</li>
+      <li>Converting the merged model to GGUF format using llama.cpp</li>
+      <li>Running the GGUF model in LM Studio</li>
+      <li>Connecting AnythingLLM to LM Studio through Docker</li>
+    </ul>
+
+    <h3>Challenges Faced</h3>
+    <ul>
+      <li>Docker installation and startup issues</li>
+      <li>Model conversion issues due to Python version compatibility</li>
+      <li>Prompt formatting mismatches</li>
+      <li>Incorrect quadratic equation outputs from TinyLlama</li>
+    </ul>
+
+    <h3>Solutions Implemented</h3>
+    <ul>
+      <li>Installed Python 3.10 for compatibility</li>
+      <li>Converted merged model to GGUF format</li>
+      <li>Connected LM Studio local server to AnythingLLM</li>
+      <li>Adjusted temperature and prompt structure for better consistency</li>
+    </ul>
+  </section>
+
+  <section id="testing">
+    <h2>Testing Results and Performance</h2>
+    <p>The system was tested on arithmetic and quadratic equation prompts.</p>
+
+    <table>
+      <tr>
+        <th>Test Case</th>
+        <th>Expected Result</th>
+        <th>Actual Result</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>5 + 5</td>
+        <td>10</td>
+        <td>10</td>
+        <td>Pass</td>
+      </tr>
+      <tr>
+        <td>2 + 2</td>
+        <td>4</td>
+        <td>4</td>
+        <td>Pass</td>
+      </tr>
+      <tr>
+        <td>Eq(x**2 - 5*x + 6, 0)</td>
+        <td>[2, 3]</td>
+        <td>Incorrect roots</td>
+        <td>Fail</td>
+      </tr>
+      <tr>
+        <td>Eq(x**2 - 4*x + 4, 0)</td>
+        <td>[2, 2]</td>
+        <td>To be tested / add your result</td>
+        <td>Pending</td>
+      </tr>
+    </table>
+
+    <p>
+      The technical deployment was successful, but the TinyLlama model showed limitations in mathematical reliability for some quadratic equations.
+    </p>
+  </section>
+
+  <section>
+    <h2>Project Links</h2>
+    <p>Add your links below before submission:</p>
+    <ul>
+      <li>GitHub Repository: <em>Insert your GitHub link here</em></li>
+      <li>Deployed Website URL: <em>Insert your website link here</em></li>
+      <li>Project Report PDF: <em>Attach separately in submission</em></li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    <p>Math Assistant GPT Project | Artificial Intelligence / Natural Language Processing</p>
+  </div>
+
+</body>
+</html>
