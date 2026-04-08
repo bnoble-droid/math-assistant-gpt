@@ -1,0 +1,1 @@
+py -3.10 convert_hf_to_gguf.py "C:\AnythingLLM\Mistral_math_qlora_merged"
