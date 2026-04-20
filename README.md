@@ -18,7 +18,7 @@ This project presents a Smart Math Assistant developed using TinyLlama, LM Studi
 - Project documentation and testing results
 
 ## GitHub Repository
-[Insert your repo link here]
+[https://github.com/bnoble-droid/math-assistant-gpt.git]
 
 ## Website
 [https://bnoble-droid.github.io/math-assistant-gpt/]
