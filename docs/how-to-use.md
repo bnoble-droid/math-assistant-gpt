@@ -1,11 +1,18 @@
-# How to Use
+# How to Use the System
 
-1. Open AnythingLLM
-2. Ensure LM Studio is running at http://127.0.0.1:1234
-3. Enter queries like:
+## Custom GPT Demo
+1. Open Docker Desktop
+2. Start LM Studio and load TinyLlama
+3. Start the LM Studio local server at http://127.0.0.1:1234
+4. Open AnythingLLM
+5. Select the TinyLlama model
+6. Ask simple arithmetic questions such as:
+   - What is 2 + 2?
+   - What is 5 + 5?
+   - What is 12 - 4?
 
-Eq(x**2 - 5*x + 6, 0)
-
-or simple math like:
-
-5 + 5
+## Website Solver
+1. Open the website
+2. Enter values for a, b, and c in the equation ax² + bx + c = 0
+3. Click Solve Equation
+4. Review the step-by-step working and final answer
