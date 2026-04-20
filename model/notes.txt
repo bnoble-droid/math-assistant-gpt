@@ -1,7 +1,9 @@
-Model folders:
+Original model folders:
 - mistral_math_qlora
 - mistral_math_qlora_final
 - mistral_math_qlora_merged
 
-Converted model:
+Deployment model used in LM Studio:
 - TinyLlama-1.1B-Chat-v1.0-F16.gguf
+
+The merged model folder was coverted to GGUF using llama.cpp for local interence. 
