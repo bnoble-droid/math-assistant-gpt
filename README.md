@@ -18,10 +18,10 @@ This project presents a Smart Math Assistant developed using TinyLlama, LM Studi
 - Project documentation and testing results
 
 ## GitHub Repository
-[https://github.com/bnoble-droid/math-assistant-gpt.git]
+https://github.com/bnoble-droid/math-assistant-gpt.git
 
 ## Website
-[https://bnoble-droid.github.io/math-assistant-gpt/]
+https://bnoble-droid.github.io/math-assistant-gpt/
 
 ## Notes
 The TinyLlama custom model deployed successfully but showed limited reliability for quadratic-equation solving. To ensure a correct final website, a deterministic quadratic solver was added.
